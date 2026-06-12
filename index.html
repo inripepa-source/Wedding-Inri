@@ -178,7 +178,8 @@
         </div>
 
         <p style="margin: 0 auto 30px" data-aos="fade-up">
-          With God's grace, we intend to host our wedding ceremony on:
+          Dengan rahmat Tuhan, kami bermaksud untuk menyelenggarakan upacara
+          pernikahan kami pada:
         </p>
 
         <div class="acara-wrapper">
@@ -202,7 +203,7 @@
           ></iframe>
         </div>
         <a
-          href="https://maps.app.goo.gl/vjX8p2XzEepb87tPA"
+          href="https://maps.app.goo.gl/C3GDBeZBQRNC444KA"
           target="_blank"
           class="btn"
           data-aos="fade-up"
@@ -307,7 +308,7 @@
           berkenan hadir dan memberikan doa restu kepada kedua mempelai.
         </p>
 
-        <form class="rsvp-form-clean">
+        <form class="rsvp-form-clean" onsubmit="kirimRSVP(event)">
           <div class="form-group-clean">
             <label for="name">Nama Lengkap</label>
             <input
@@ -329,9 +330,9 @@
           <div class="form-group-clean">
             <label for="status">Konfirmasi Kehadiran</label>
             <select id="status" required>
-              <option value="hadir">Hadir</option>
-              <option value="ragu">Masih Ragu</option>
-              <option value="tidak_hadir">Tidak Dapat Hadir</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Masih Ragu">Masih Ragu</option>
+              <option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
             </select>
           </div>
 
@@ -481,6 +482,54 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      function kirimRSVP(event) {
+        event.preventDefault();
+
+        // Mengambil data dari input form RSVP
+        const nama = document.getElementById("name").value;
+        const jumlahTamu = document.getElementById("guests").value;
+        const statusHadir = document.getElementById("status").value;
+        const daftar = document.getElementById("daftar-ucapan");
+
+        // Format tanggal saat ini
+        const opsi = { year: "numeric", month: "long", day: "numeric" };
+        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
+
+        // Membuat badge warna dinamis sesuai status kehadiran
+        let badgeClass = "badge-hadir";
+        if (statusHadir === "Tidak Dapat Hadir") {
+          badgeClass = "badge-absen"; // Anda bisa menambahkan style merah di CSS jika mau
+        } else if (statusHadir === "Masih Ragu") {
+          badgeClass = "badge-ragu";
+        }
+
+        // Membuat elemen ucapan otomatis dari data RSVP
+        const ucapanBaru = document.createElement("div");
+        ucapanBaru.className = "ucapan-item-card animated-fade-in";
+        ucapanBaru.innerHTML = `
+    <div class="ucapan-header">
+      <h4>${nama}</h4>
+      <span class="${badgeClass}">✓ ${statusHadir} (${jumlahTamu} Orang)</span>
+    </div>
+    <p><em>Telah melakukan konfirmasi kehadiran melalui sistem RSVP.</em></p>
+    <span class="ucapan-time">${hariIni}</span>
+  `;
+
+        // Memasukkan hasil RSVP ke urutan paling atas daftar ucapan
+        if (daftar) {
+          daftar.insertBefore(ucapanBaru, daftar.firstChild);
+        }
+
+        // Reset form setelah sukses dikirim
+        document.getElementById("name").value = "";
+        document.getElementById("guests").selectedIndex = 0;
+        document.getElementById("status").selectedIndex = 0;
+
+        // Notifikasi sukses kepada tamu
+        alert(
+          `Terima kasih ${nama}, konfirmasi kehadiran Anda (${statusHadir}) telah kami terima! ✨`,
+        );
+      }
       AOS.init({
         duration: 1000,
         once: false,

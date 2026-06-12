@@ -1003,3 +1003,20 @@ p {
     font-size: 0.75rem !important;
   }
 }
+
+/* Warna Tambahan untuk Status RSVP */
+.badge-absen {
+  font-size: 0.7rem;
+  background: rgba(244, 67, 54, 0.2); /* Merah lembut */
+  color: #ef5350;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.badge-ragu {
+  font-size: 0.7rem;
+  background: rgba(255, 152, 0, 0.2); /* Jingga lembut */
+  color: #ffb74d;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
