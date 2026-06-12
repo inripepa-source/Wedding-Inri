@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan Digital Estetik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="no-scroll">
+    <audio id="weddingMusic" loop>
+      <source src="Audio/musik.mp3" type="audio/mpeg" />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <button id="musicBtn" class="music-control-btn" onclick="toggleMusic()">
+      <span id="musicIcon">🎵</span>
+    </button>
+
+    <nav id="navbar" class="navbar-hidden">
+      <a href="#home">Home</a>
+      <a href="#mempelai">Mempelai</a>
+      <a href="#informasi">Acara</a>
+      <a href="#cerita">Cerita</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#ucapan">ucapan</a>
+      <a href="#hadiah">Hadiah</a>
+    </nav>
+
+    <section id="home" class="cover-screen">
+      <div class="glass-card aesthetic-fade">
+        <p>The Wedding of</p>
+
+        <div class="couple-preview">
+          <div class="avatar-frame">
+            <img src="img/couple1.jpeg" alt="Henra S.P" />
+            <span>Henra</span>
+          </div>
+          <div class="couple-separator">&</div>
+          <div class="avatar-frame">
+            <img src="img/couple2.jpeg" alt="Inri S.Kom" />
+            <span>Inri</span>
+          </div>
+        </div>
+
+        <p style="margin-bottom: 25px">
+          Kami mengundang Anda untuk merayakan kebahagiaan kami
+        </p>
+
+        <div
+          class="guest-container"
+          style="margin: 20px auto; padding: 10px; max-width: 90%"
+        >
+          <p
+            style="
+              font-size: 0.8rem;
+              letter-spacing: 3px;
+              margin-bottom: 8px;
+              color: var(--text-gold);
+              text-transform: uppercase;
+            "
+          >
+            To:
+          </p>
+          <p
+            style="
+              font-family: &quot;Montserrat&quot;, sans-serif;
+              font-size: 1.4rem;
+              font-weight: 300;
+              letter-spacing: 1px;
+              color: #ffffff;
+              margin-bottom: 0;
+              text-transform: none;
+            "
+          >
+            Bapak/Ibu/Saudara/i
+          </p>
+        </div>
+
+        <a
+          href="#mempelai"
+          class="btn pulse-animation"
+          onclick="openInvitation(event)"
+          style="margin-top: 10px"
+        >
+          Buka Undangan
+        </a>
+
+        <p
+          style="
+            font-size: 0.7rem;
+            font-style: italic;
+            margin-top: 25px;
+            opacity: 0.7;
+            max-width: 100%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          "
+        >
+          Mohon maaf jika ada kesalahan dalam penulisan nama/gelar.
+        </p>
+      </div>
+    </section>
+
+    <section id="mempelai">
+      <div class="glass-card page-mempelai-container" data-aos="fade-up">
+        <h2
+          class="script-font"
+          style="font-size: 3.8rem; margin-bottom: 5px; text-transform: none"
+        >
+          Acara Pernikahan
+        </h2>
+        <p class="sub-judul-mempelai" data-aos="fade-up" data-aos-delay="200">
+          Diselenggarakan pada Selasa, 08 Agustus 2028 di Desa Teteuri, Luwu
+          Utara. Dengan segala hormat, kami mengundang Bapak/Ibu/Saudara/i untuk
+          menghadiri dan memberikan doa restu.
+        </p>
+
+        <div class="mempelai-wrapper">
+          <div class="mempelai-box" data-aos="fade-right" data-aos-delay="400">
+            <div class="mempelai-photo-frame">
+              <img src="img/couple1.jpeg" alt="Henra S.P" />
+            </div>
+            <h3 class="nama-mempelai">Henra S.P</h3>
+            <p class="deskripsi-mempelai">
+              Seorang pribadi yang sederhana dan penuh tanggung jawab, percaya
+              bahwa cinta sejati bertumbuh melalui kesetiaan, pengorbanan, dan
+              kasih yang tulus.
+            </p>
+            <p class="orang-tua-mempelai">
+              Putra dari<br /><strong>Bpk. Efsan & Ibu Yeremia</strong>
+            </p>
+          </div>
+
+          <div
+            class="mempelai-heart-center"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <span class="heart-icon">❤️</span>
+          </div>
+
+          <div class="mempelai-box" data-aos="fade-left" data-aos-delay="400">
+            <div class="mempelai-photo-frame">
+              <img src="img/couple2.jpeg" alt="Inria S.Kom" />
+            </div>
+            <h3 class="nama-mempelai">Inria S.Kom</h3>
+            <p class="deskripsi-mempelai">
+              Seorang pribadi yang penuh kasih dan kelembutan, yang percaya
+              bahwa kebahagiaan sejati lahir dari cinta, doa, dan kebersamaan
+              dalam Tuhan.
+            </p>
+            <p class="orang-tua-mempelai">
+              Putri dari<br /><strong
+                >Bpk. Topan Pepa' & Ibu Kristina Parayo</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="informasi">
+      <div class="glass-card" data-aos="fade-up">
+        <h2>Informasi Acara</h2>
+
+        <div class="countdown" data-aos="zoom-in" data-aos-delay="200">
+          <div class="countdown-item">
+            <span id="days">00</span><label>Hari</label>
+          </div>
+          <div class="countdown-item">
+            <span id="hours">00</span><label>Jam</label>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">00</span><label>Menit</label>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">00</span><label>Detik</label>
+          </div>
+        </div>
+
+        <p style="margin: 0 auto 30px" data-aos="fade-up">
+          Dengan Rahmat Tuhan yang Maha Esa, Kami Bermaksud Menyelenggarakan
+          Acara Pernikahan Kami Pada:
+        </p>
+
+        <div class="acara-wrapper">
+          <div class="acara-box" data-aos="fade-right" data-aos-delay="300">
+            <h3 class="script-font" style="font-size: 2.5rem">Akad Nikah</h3>
+            <p><strong>Selasa, 8 Agustus 2028</strong></p>
+            <p>Pukul 10.00 - 12.00 WIB</p>
+            <p>Gereja Toraja Siloam Teteuri</p>
+          </div>
+          <div class="acara-box" data-aos="fade-left" data-aos-delay="300">
+            <h3 class="script-font" style="font-size: 2.5rem">Resepsi</h3>
+            <p><strong>Selasa, 8 Agustus 2028</strong></p>
+            <p>Pukul 13.00 - Selesai</p>
+            <p>Kediaman Mempelai Perempuan</p>
+          </div>
+        </div>
+
+        <div class="map-container" data-aos="zoom-in" data-aos-delay="400">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.298852567235!2d120.23389317425989!3d-2.7273804388978506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d917f28a6518ad3%3A0x1a33743c09e8cb4!2sGereja%20Toraja%20jemaat%20Siloam%20Teteuri&#39;!5e0!3m2!1sid!2sid!4v1781271655199!5m2!1sid!2sid"
+          ></iframe>
+        </div>
+        <a
+          href="https://maps.app.goo.gl/snrV8khZFrc39vQ9A"
+          target="_blank"
+          class="btn"
+          data-aos="fade-up"
+        >
+          Buka di Google Maps
+        </a>
+      </div>
+    </section>
+
+    <section id="cerita">
+      <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
+        <h2>Love Story</h2>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <div
+            class="timeline-item left-item"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <div class="timeline-badge">
+              <img src="img/inrihenra1.jpg" alt="inrihenra" />
+            </div>
+            <div class="timeline-panel">
+              <h3>2023 - Pertama Bertemu</h3>
+              <p>
+                Bukan lagi tentang mencari yang sempurna, melainkan tentang
+                komitmen untuk saling menjaga dan menerima setiap kurang. Di
+                titik ini, kami memilih untuk melangkah lebih jauh, menyatukan
+                visi, dan berjalan beriringan menuju satu impian yang pasti.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="timeline-item right-item"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <div class="timeline-badge">
+              <img src="img/inrihenra5.jpg" alt="inrihenra" />
+            </div>
+            <div class="timeline-panel">
+              <h3>2025 - Menjalin Komitmen</h3>
+              <p>
+                Tuhan tidak pernah keliru dalam menuliskan skenario-Nya. Dari
+                sebuah tatap muka singkat yang tidak pernah diduga sebelumnya,
+                ternyata menjadi awal dari sebuah perjalanan panjang yang kami
+                ukir bersama. Senyuman sederhana hari itu, kini menjadi alasan
+                kami untuk melangkah beriringan selamanya.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="timeline-item left-item"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+            <div class="timeline-badge">
+              <img src="img/galery.jpg" alt="Foto 3" />
+            </div>
+            <div class="timeline-panel">
+              <h3>2028 - Lamaran</h3>
+              <p>
+                Di bawah untaian doa dan restu tulus dari kedua orang tua, kami
+                resmi mengikat janji pertunangan. Langkah ini menjadi sebuah
+                gerbang pembuka sekaligus komitmen suci sebelum kami melebur
+                menjadi satu di hari pernikahan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" style="padding: 80px 0">
+      <h2 data-aos="fade-down">Galeri Kebahagiaan</h2>
+      <div class="gallery-container" data-aos="zoom-in">
+        <div class="marquee-track">
+          <img />
+          <img src="img/inrihenra1.jpg" alt="Foto 1" />
+          <img src="img/inrihenra2.jpg" alt="Foto 2" />
+          <img src="img/inrihenra3.jpg" alt="Foto 3" />
+          <img src="img/inrihenra4.jpg" alt="Foto 4" />
+          <img src="img/inrihenra5.jpg" alt="Foto 5" />
+          <img src="img/inrihenra6.jpg" alt="Foto 6" />
+          <img src="img/galery.jpg" alt="Foto 7" />
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
+        <h2>Konfirmasi Kehadiran</h2>
+        <p class="rsvp-subtitle">
+          Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i
+          berkenan hadir dan memberikan doa restu kepada kedua mempelai.
+        </p>
+
+        <form class="rsvp-form-clean">
+          <div class="form-group-clean">
+            <label for="name">Nama Lengkap</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+
+          <div class="form-group-clean">
+            <label for="guests">Jumlah Tamu</label>
+            <select id="guests" required>
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+            </select>
+          </div>
+
+          <div class="form-group-clean">
+            <label for="status">Konfirmasi Kehadiran</label>
+            <select id="status" required>
+              <option value="hadir">Hadir</option>
+              <option value="ragu">Masih Ragu</option>
+              <option value="tidak_hadir">Tidak Dapat Hadir</option>
+            </select>
+          </div>
+
+          <button type="submit" class="rsvp-submit-btn">
+            Kirim Konfirmasi
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="ucapan">
+      <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
+        <h2>Ucapan & Doa Restu</h2>
+        <p class="ucapan-subtitle">
+          Berikan doa restu dan ucapan hangat Anda untuk mengiringi langkah baru
+          pernikahan kami:
+        </p>
+
+        <form class="ucapan-form" onsubmit="tambahUcapan(event)">
+          <div class="form-group-clean">
+            <label for="guest-name">Nama Anda</label>
+            <input
+              type="text"
+              id="guest-name"
+              placeholder="Masukkan nama lengkap Anda"
+              required
+            />
+          </div>
+          <div class="form-group-clean">
+            <label for="guest-message">Pesan / Doa Restu</label>
+            <textarea
+              id="guest-message"
+              rows="4"
+              placeholder="Tuliskan doa terbaik Anda untuk kedua mempelai..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="ucapan-submit-btn">
+            ✨ Kirim Ucapan
+          </button>
+        </form>
+
+        <div class="ucapan-list-container">
+          <div class="ucapan-box" id="daftar-ucapan">
+            <div class="ucapan-item-card">
+              <div class="ucapan-header">
+                <h4>Budi & Keluarga</h4>
+                <span class="badge-hadir">✓ Hadir</span>
+              </div>
+              <p>
+                Selamat menempuh hidup baru! Semoga menjadi keluarga yang
+                sakinah, mawaddah, warahmah. Bahagia selalu hingga kakek nenek,
+                ya!
+              </p>
+
+              <span class="ucapan-time">12 Juni 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function tambahUcapan(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("guest-name").value;
+        const pesan = document.getElementById("guest-message").value;
+        const daftar = document.getElementById("daftar-ucapan");
+
+        // Mendapatkan tanggal hari ini secara otomatis
+        const opsi = { year: "numeric", month: "long", day: "numeric" };
+        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
+
+        // Membuat elemen kartu ucapan baru secara dinamis
+        const ucapanBaru = document.createElement("div");
+        ucapanBaru.className = "ucapan-item-card animated-fade-in";
+        ucapanBaru.innerHTML = `
+          <div class="ucapan-header">
+            <h4>${nama}</h4>
+            <span class="badge-hadir">✓ Tamu</span>
+          </div>
+          <p>${pesan}</p>
+          <span class="ucapan-time">${hariIni}</span>
+        `;
+
+        // Menambahkan ucapan baru di urutan paling atas daftar gulir
+        daftar.insertBefore(ucapanBaru, daftar.firstChild);
+
+        // Reset form setelah berhasil dikirim
+        document.getElementById("guest-name").value = "";
+        document.getElementById("guest-message").value = "";
+
+        alert("Terima kasih! Ucapan dan doa restu Anda telah terpasang.");
+      }
+    </script>
+
+    <section id="hadiah">
+      <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
+        <h2>Wedding Gift</h2>
+        <p class="gift-subtitle">
+          Bagi bapak/ibu/saudara/i yang ingin memberikan hadiah tanda kasih,
+          dapat mengirimkannya melalui rekening atau QRIS di bawah ini:
+        </p>
+
+        <div class="gift-grid-container">
+          <div class="bank-card-clean" data-aos="zoom-in" data-aos-delay="100">
+            <div class="logo-wrapper-clean">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg"
+                alt="Logo BCA"
+                class="bca-logo-clean"
+              />
+            </div>
+            <div class="bank-details-clean">
+              <span class="label-rekening">Nomor Rekening</span>
+              <p class="rekening-number-clean" id="rek-bca">1234567890</p>
+              <p class="account-name-clean">a.n. Nama Pengantin</p>
+            </div>
+            <button
+              type="button"
+              class="bank-copy-btn"
+              onclick="salinTeks('rek-bca')"
+            >
+              📋 Salin Rekening
+            </button>
+          </div>
+
+          <div class="bank-card-clean" data-aos="zoom-in" data-aos-delay="300">
+            <div class="logo-wrapper-clean">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg"
+                alt="Logo QRIS"
+                class="qris-logo-clean"
+              />
+            </div>
+            <div class="qris-container-clean">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ContohQrisPernikahan"
+                alt="Barcode QRIS"
+                class="qris-image"
+              />
+              <p class="account-name-clean" style="margin-top: 15px !important">
+                Scan QR Code
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="gift-footer-text">Terima kasih atas kebaikan Anda</p>
+      </div>
+    </section>
+
+    <script>
+      function salinTeks(idElemen) {
+        const text = document.getElementById(idElemen).innerText;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert("Nomor rekening berhasil disalin!");
+          })
+          .catch((err) => {
+            console.error("Gagal menyalin teks: ", err);
+          });
+      }
+    </script>
+
+    <script>
+      function salinTeks(idElemen) {
+        const text = document.getElementById(idElemen).innerText;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert("Nomor rekening berhasil dikalin!");
+          })
+          .catch((err) => {
+            console.error("Gagal menyalin teks: ", err);
+          });
+      }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // Inisialisasi library animasi scroll
+      AOS.init({
+        duration: 1000, // Durasi animasi dalam milidetik (1 detik)
+        once: false, // Setel ke false agar animasi berulang kembali saat di-scroll ke atas/bawah
+        mirror: true, // Memicu animasi saat elemen melewatinya kembali
+      });
+
+      const myAudio = document.getElementById("weddingMusic");
+      const musicIcon = document.getElementById("musicIcon");
+      const navbar = document.getElementById("navbar");
+      let isPlaying = false;
+
+      function openInvitation(event) {
+        if (event) event.preventDefault();
+
+        document.body.classList.remove("no-scroll");
+        navbar.classList.remove("navbar-hidden");
+        navbar.classList.add("navbar-visible");
+
+        if (!isPlaying) {
+          myAudio
+            .play()
+            .then(() => {
+              isPlaying = true;
+              musicIcon.innerText = "⏸️";
+              document.getElementById("musicBtn").classList.add("rotating");
+            })
+            .catch((error) => {
+              console.log("Musik otomatis tertahan aturan browser.");
+            });
+        }
+
+        document.getElementById("mempelai").scrollIntoView({
+          behavior: "smooth",
+        });
+
+        // Memaksa refresh deteksi posisi animasi AOS setelah halaman terbuka
+        setTimeout(() => {
+          AOS.refresh();
+        }, 500);
+      }
+
+      function toggleMusic() {
+        if (isPlaying) {
+          myAudio.pause();
+          musicIcon.innerText = "🎵";
+          document.getElementById("musicBtn").classList.remove("rotating");
+        } else {
+          myAudio.play();
+          musicIcon.innerText = "⏸️";
+          document.getElementById("musicBtn").classList.add("rotating");
+        }
+        isPlaying = !isPlaying;
+      }
+
+      // --- SCRIPT COUNTDOWN ---
+      const targetDate = new Date("August 8, 2028 10:00:00").getTime();
+
+      const countdownInterval = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText =
+          days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText =
+          hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText =
+          minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerText =
+          seconds < 10 ? "0" + seconds : seconds;
+
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.querySelector(".countdown").innerHTML =
+            "<h3>Acara Telah Dimulai!</h3>";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
