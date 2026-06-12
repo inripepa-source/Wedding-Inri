@@ -13,28 +13,30 @@
   --text-gold: #e5c158;
 }
 
+/* --- PERBAIKAN LATAR BELAKANG ANTI-BLUR / ANTI-ZOOM HP --- */
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #121212; /* Warna dasar gelap jika gambar belum termuat */
+}
+
+/* Membuat latar belakang statis buatan yang aman untuk semua jenis HP */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* GANTI LINK DI BAWAH DENGAN FOTO UTAMA ANDA */
   background-image: url("img/bg1.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-}
-
-body.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.cover-screen {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  z-index: 1001;
+  z-index: -1; /* Mengunci gambar agar selalu berada di paling belakang konten */
 }
 
 /* --- GLOBAL STYLES --- */
