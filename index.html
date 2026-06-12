@@ -1,8 +1,34 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
+      <title>Undangan Pernikahan Digital Estetik</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      />
+
+      <link rel="stylesheet" href="style.css" />
+    </head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Undangan Pernikahan Digital Estetik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,13 +57,13 @@
       <a href="#cerita">Cerita</a>
       <a href="#galeri">Galeri</a>
       <a href="#rsvp">RSVP</a>
-      <a href="#ucapan">ucapan</a>
+      <a href="#ucapan">Ucapan</a>
       <a href="#hadiah">Hadiah</a>
     </nav>
 
     <section id="home" class="cover-screen">
       <div class="glass-card aesthetic-fade">
-        <p>The Wedding of</p>
+        <p class="top-title">The Wedding of</p>
 
         <div class="couple-preview">
           <div class="avatar-frame">
@@ -51,60 +77,24 @@
           </div>
         </div>
 
-        <p style="margin-bottom: 25px">
+        <p class="invitation-text">
           Kami mengundang Anda untuk merayakan kebahagiaan kami
         </p>
 
-        <div
-          class="guest-container"
-          style="margin: 20px auto; padding: 10px; max-width: 90%"
-        >
-          <p
-            style="
-              font-size: 0.8rem;
-              letter-spacing: 3px;
-              margin-bottom: 8px;
-              color: var(--text-gold);
-              text-transform: uppercase;
-            "
-          >
-            To:
-          </p>
-          <p
-            style="
-              font-family: &quot;Montserrat&quot;, sans-serif;
-              font-size: 1.4rem;
-              font-weight: 300;
-              letter-spacing: 1px;
-              color: #ffffff;
-              margin-bottom: 0;
-              text-transform: none;
-            "
-          >
-            Bapak/Ibu/Saudara/i
-          </p>
+        <div class="guest-container">
+          <p class="to-label">To:</p>
+          <p class="guest-title">Bapak/Ibu/Saudara/i</p>
         </div>
 
         <a
           href="#mempelai"
           class="btn pulse-animation"
           onclick="openInvitation(event)"
-          style="margin-top: 10px"
         >
           Buka Undangan
         </a>
 
-        <p
-          style="
-            font-size: 0.7rem;
-            font-style: italic;
-            margin-top: 25px;
-            opacity: 0.7;
-            max-width: 100%;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-          "
-        >
+        <p class="note-text">
           Mohon maaf jika ada kesalahan dalam penulisan nama/gelar.
         </p>
       </div>
@@ -188,8 +178,7 @@
         </div>
 
         <p style="margin: 0 auto 30px" data-aos="fade-up">
-          Dengan Rahmat Tuhan yang Maha Esa, Kami Bermaksud Menyelenggarakan
-          Acara Pernikahan Kami Pada:
+          With God's grace, we intend to host our wedding ceremony on:
         </p>
 
         <div class="acara-wrapper">
@@ -209,11 +198,11 @@
 
         <div class="map-container" data-aos="zoom-in" data-aos-delay="400">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.298852567235!2d120.23389317425989!3d-2.7273804388978506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d917f28a6518ad3%3A0x1a33743c09e8cb4!2sGereja%20Toraja%20jemaat%20Siloam%20Teteuri&#39;!5e0!3m2!1sid!2sid!4v1781271655199!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5252033092283!2d120.3235654!3d-2.5152864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d91456a29e46973%3A0x6b44769062b1b369!2sTeteuri%2C%20Kec.%20Sabbang%2C%20Kabupaten%20Luwu%20Utara%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid"
           ></iframe>
         </div>
         <a
-          href="https://maps.app.goo.gl/snrV8khZFrc39vQ9A"
+          href="https://maps.app.goo.gl/vjX8p2XzEepb87tPA"
           target="_blank"
           class="btn"
           data-aos="fade-up"
@@ -295,7 +284,6 @@
       <h2 data-aos="fade-down">Galeri Kebahagiaan</h2>
       <div class="gallery-container" data-aos="zoom-in">
         <div class="marquee-track">
-          <img />
           <img src="img/inrihenra1.jpg" alt="Foto 1" />
           <img src="img/inrihenra2.jpg" alt="Foto 2" />
           <img src="img/inrihenra3.jpg" alt="Foto 3" />
@@ -303,6 +291,10 @@
           <img src="img/inrihenra5.jpg" alt="Foto 5" />
           <img src="img/inrihenra6.jpg" alt="Foto 6" />
           <img src="img/galery.jpg" alt="Foto 7" />
+          <img src="img/inrihenra1.jpg" alt="Foto 1" />
+          <img src="img/inrihenra2.jpg" alt="Foto 2" />
+          <img src="img/inrihenra3.jpg" alt="Foto 3" />
+          <img src="img/inrihenra4.jpg" alt="Foto 4" />
         </div>
       </div>
     </section>
@@ -391,51 +383,14 @@
               </div>
               <p>
                 Selamat menempuh hidup baru! Semoga menjadi keluarga yang
-                sakinah, mawaddah, warahmah. Bahagia selalu hingga kakek nenek,
-                ya!
+                harmonis dan penuh berkah. Bahagia selalu hingga akhir hayat!
               </p>
-
               <span class="ucapan-time">12 Juni 2026</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <script>
-      function tambahUcapan(event) {
-        event.preventDefault();
-
-        const nama = document.getElementById("guest-name").value;
-        const pesan = document.getElementById("guest-message").value;
-        const daftar = document.getElementById("daftar-ucapan");
-
-        // Mendapatkan tanggal hari ini secara otomatis
-        const opsi = { year: "numeric", month: "long", day: "numeric" };
-        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
-
-        // Membuat elemen kartu ucapan baru secara dinamis
-        const ucapanBaru = document.createElement("div");
-        ucapanBaru.className = "ucapan-item-card animated-fade-in";
-        ucapanBaru.innerHTML = `
-          <div class="ucapan-header">
-            <h4>${nama}</h4>
-            <span class="badge-hadir">✓ Tamu</span>
-          </div>
-          <p>${pesan}</p>
-          <span class="ucapan-time">${hariIni}</span>
-        `;
-
-        // Menambahkan ucapan baru di urutan paling atas daftar gulir
-        daftar.insertBefore(ucapanBaru, daftar.firstChild);
-
-        // Reset form setelah berhasil dikirim
-        document.getElementById("guest-name").value = "";
-        document.getElementById("guest-message").value = "";
-
-        alert("Terima kasih! Ucapan dan doa restu Anda telah terpasang.");
-      }
-    </script>
 
     <section id="hadiah">
       <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
@@ -457,7 +412,7 @@
             <div class="bank-details-clean">
               <span class="label-rekening">Nomor Rekening</span>
               <p class="rekening-number-clean" id="rek-bca">1234567890</p>
-              <p class="account-name-clean">a.n. Nama Pengantin</p>
+              <p class="account-name-clean">a.n. Henra/Inri</p>
             </div>
             <button
               type="button"
@@ -491,43 +446,45 @@
 
         <p class="gift-footer-text">Terima kasih atas kebaikan Anda</p>
       </div>
+      <footer class="wedding-custom-footer">
+        <div class="footer-copyright-block">
+          <span>© 2028 Inri & Henra Wedding. All Rights Reserved.</span>
+        </div>
+        <div class="footer-credit-block">
+          <span
+            >Design Inspiration by
+            <a href="https://instagram.com/Inrialisti" target="_blank"
+              >@Inrialisti</a
+            >
+          </span>
+        </div>
+
+        <ul class="footer-social-icons">
+          <li>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+          </li>
+        </ul>
+      </footer>
     </section>
-
-    <script>
-      function salinTeks(idElemen) {
-        const text = document.getElementById(idElemen).innerText;
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            alert("Nomor rekening berhasil disalin!");
-          })
-          .catch((err) => {
-            console.error("Gagal menyalin teks: ", err);
-          });
-      }
-    </script>
-
-    <script>
-      function salinTeks(idElemen) {
-        const text = document.getElementById(idElemen).innerText;
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            alert("Nomor rekening berhasil dikalin!");
-          })
-          .catch((err) => {
-            console.error("Gagal menyalin teks: ", err);
-          });
-      }
-    </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      // Inisialisasi library animasi scroll
       AOS.init({
-        duration: 1000, // Durasi animasi dalam milidetik (1 detik)
-        once: false, // Setel ke false agar animasi berulang kembali saat di-scroll ke atas/bawah
-        mirror: true, // Memicu animasi saat elemen melewatinya kembali
+        duration: 1000,
+        once: false,
+        mirror: true,
       });
 
       const myAudio = document.getElementById("weddingMusic");
@@ -538,10 +495,14 @@
       function openInvitation(event) {
         if (event) event.preventDefault();
 
+        // Melepas penguncian scroll pada body
         document.body.classList.remove("no-scroll");
+
+        // Memunculkan navbar
         navbar.classList.remove("navbar-hidden");
         navbar.classList.add("navbar-visible");
 
+        // Memutar musik otomatis
         if (!isPlaying) {
           myAudio
             .play()
@@ -551,15 +512,16 @@
               document.getElementById("musicBtn").classList.add("rotating");
             })
             .catch((error) => {
-              console.log("Musik otomatis tertahan aturan browser.");
+              console.log("Musik tertahan sistem autoplay browser.");
             });
         }
 
+        // Efek transisi gulir langsung ke bagian pengantin
         document.getElementById("mempelai").scrollIntoView({
           behavior: "smooth",
         });
 
-        // Memaksa refresh deteksi posisi animasi AOS setelah halaman terbuka
+        // Merefresh library AOS animasi agar tidak nge-bug saat halaman terbuka
         setTimeout(() => {
           AOS.refresh();
         }, 500);
@@ -578,7 +540,48 @@
         isPlaying = !isPlaying;
       }
 
-      // --- SCRIPT COUNTDOWN ---
+      function salinTeks(idElemen) {
+        const text = document.getElementById(idElemen).innerText;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert("Nomor rekening berhasil disalin!");
+          })
+          .catch((err) => {
+            console.error("Gagal menyalin teks: ", err);
+          });
+      }
+
+      function tambahUcapan(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("guest-name").value;
+        const pesan = document.getElementById("guest-message").value;
+        const daftar = document.getElementById("daftar-ucapan");
+
+        const opsi = { year: "numeric", month: "long", day: "numeric" };
+        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
+
+        const ucapanBaru = document.createElement("div");
+        ucapanBaru.className = "ucapan-item-card animated-fade-in";
+        ucapanBaru.innerHTML = `
+          <div class="ucapan-header">
+            <h4>${nama}</h4>
+            <span class="badge-hadir">✓ Tamu</span>
+          </div>
+          <p>${pesan}</p>
+          <span class="ucapan-time">${hariIni}</span>
+        `;
+
+        daftar.insertBefore(ucapanBaru, daftar.firstChild);
+
+        document.getElementById("guest-name").value = "";
+        document.getElementById("guest-message").value = "";
+
+        alert("Terima kasih! Ucapan Anda telah ditambahkan.");
+      }
+
+      // --- SCRIPT TIMEOUT COUNTDOWN ---
       const targetDate = new Date("August 8, 2028 10:00:00").getTime();
 
       const countdownInterval = setInterval(function () {
@@ -604,7 +607,7 @@
         if (distance < 0) {
           clearInterval(countdownInterval);
           document.querySelector(".countdown").innerHTML =
-            "<h3>Acara Telah Dimulai!</h3>";
+            "<h3>Acara Pernikahan Telah Dimulai!</h3>";
         }
       }, 1000);
     </script>
