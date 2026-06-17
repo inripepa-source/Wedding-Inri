@@ -57,7 +57,6 @@
       <a href="#cerita">Cerita</a>
       <a href="#galeri">Galeri</a>
       <a href="#rsvp">RSVP</a>
-      <a href="#ucapan">Ucapan</a>
       <a href="#hadiah">Hadiah</a>
     </nav>
 
@@ -76,10 +75,6 @@
             <span>Inri</span>
           </div>
         </div>
-
-        <p class="invitation-text">
-          Kami mengundang Anda untuk merayakan kebahagiaan kami
-        </p>
 
         <div class="guest-container">
           <p class="to-label">To:</p>
@@ -144,9 +139,9 @@
             </div>
             <h3 class="nama-mempelai">Inria S.Kom</h3>
             <p class="deskripsi-mempelai">
-              Seorang pribadi yang penuh kasih dan kelembutan, yang percaya
-              bahwa kebahagiaan sejati lahir dari cinta, doa, dan kebersamaan
-              dalam Tuhan.
+              Seorang pribadi yang penuh kasih dan kelembutan, percaya bahwa
+              kebahagiaan sejati lahir dari cinta, doa, dan kebersamaan dalam
+              Tuhan.
             </p>
             <p class="orang-tua-mempelai">
               Putri dari<br /><strong
@@ -226,15 +221,15 @@
             data-aos-delay="200"
           >
             <div class="timeline-badge">
-              <img src="img/inrihenra1.jpg" alt="inrihenra" />
+              <img src="img/inrihenra3.jpg" alt="inrihenra" />
             </div>
             <div class="timeline-panel">
               <h3>2023 - Pertama Bertemu</h3>
               <p>
-                Bukan lagi tentang mencari yang sempurna, melainkan tentang
-                komitmen untuk saling menjaga dan menerima setiap kurang. Di
-                titik ini, kami memilih untuk melangkah lebih jauh, menyatukan
-                visi, dan berjalan beriringan menuju satu impian yang pasti.
+                Berawal dari sebuah pertemuan sederhana yang tak terduga. Di
+                sinilah perjalanan kami dimulai, mengubah dua orang asing
+                menjadi satu cerita yang perlahan mulai tumbuh dengan penuh
+                harapan.
               </p>
             </div>
           </div>
@@ -285,15 +280,15 @@
       <h2 data-aos="fade-down">Galeri Kebahagiaan</h2>
       <div class="gallery-container" data-aos="zoom-in">
         <div class="marquee-track">
-          <img src="img/inrihenra1.jpg" alt="Foto 1" />
-          <img src="img/inrihenra2.jpg" alt="Foto 2" />
+          <img src="img/inrihenra1.jpeg" alt="Foto 1" />
+          <img src="img/inrihenra2.jpeg" alt="Foto 2" />
           <img src="img/inrihenra3.jpg" alt="Foto 3" />
           <img src="img/inrihenra4.jpg" alt="Foto 4" />
           <img src="img/inrihenra5.jpg" alt="Foto 5" />
           <img src="img/inrihenra6.jpg" alt="Foto 6" />
           <img src="img/galery.jpg" alt="Foto 7" />
-          <img src="img/inrihenra1.jpg" alt="Foto 1" />
-          <img src="img/inrihenra2.jpg" alt="Foto 2" />
+          <img src="img/inrihenra1.jpeg" alt="Foto 1" />
+          <img src="img/inrihenra2.jpeg" alt="Foto 2" />
           <img src="img/inrihenra3.jpg" alt="Foto 3" />
           <img src="img/inrihenra4.jpg" alt="Foto 4" />
         </div>
@@ -302,13 +297,17 @@
 
     <section id="rsvp">
       <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Konfirmasi Kehadiran</h2>
-        <p class="rsvp-subtitle">
-          Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i
-          berkenan hadir dan memberikan doa restu kepada kedua mempelai.
+        <h2>Konfirmasi kehadiran</h2>
+        <p class="rsvp-subtitle rsvp-desc-text">
+          Mohon kesediaan Bapak/Ibu/Saudara/i untuk melakukan konfirmasi
+          kehadiran dan memberikan ucapan restu.
         </p>
 
-        <form class="rsvp-form-clean" onsubmit="kirimRSVP(event)">
+        <form
+          id="combined-form"
+          class="rsvp-form-clean"
+          onsubmit="kirimKeWhatsApp(event)"
+        >
           <div class="form-group-clean">
             <label for="name">Nama Lengkap</label>
             <input
@@ -319,74 +318,40 @@
             />
           </div>
 
-          <div class="form-group-clean">
-            <label for="guests">Jumlah Tamu</label>
-            <select id="guests" required>
-              <option value="1">1 Orang</option>
-              <option value="2">2 Orang</option>
-            </select>
+          <div style="display: flex; gap: 15px">
+            <div class="form-group-clean" style="flex: 1">
+              <label for="guests">Jumlah Tamu</label>
+              <select id="guests" required>
+                <option value="1 Orang">1 Orang</option>
+                <option value="2 Orang">2 Orang</option>
+              </select>
+            </div>
+            <div class="form-group-clean" style="flex: 1">
+              <label for="status">Kehadiran</label>
+              <select id="status" required>
+                <option value="Hadir">Hadir</option>
+                <option value="Masih Ragu">Masih Ragu</option>
+                <option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
+              </select>
+            </div>
           </div>
 
           <div class="form-group-clean">
-            <label for="status">Konfirmasi Kehadiran</label>
-            <select id="status" required>
-              <option value="Hadir">Hadir</option>
-              <option value="Masih Ragu">Masih Ragu</option>
-              <option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
-            </select>
-          </div>
-
-          <button type="submit" class="rsvp-submit-btn">
-            Kirim Konfirmasi
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <section id="ucapan">
-      <div class="glass-card" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Ucapan & Doa Restu</h2>
-        <p class="ucapan-subtitle">
-          Berikan doa restu dan ucapan hangat Anda untuk mengiringi langkah baru
-          pernikahan kami:
-        </p>
-
-        <form class="ucapan-form" onsubmit="tambahUcapan(event)">
-          <div class="form-group-clean">
-            <label for="guest-name">Nama Anda</label>
-            <input
-              type="text"
-              id="guest-name"
-              placeholder="Masukkan nama lengkap Anda"
-              required
-            />
-          </div>
-          <div class="form-group-clean">
-            <label for="guest-message">Pesan / Doa Restu</label>
+            <label for="message">Pesan / Doa Restu</label>
             <textarea
-              id="guest-message"
+              id="message"
               rows="4"
-              placeholder="Tuliskan doa terbaik Anda untuk kedua mempelai..."
-              required
+              placeholder="Tuliskan doa terbaik Anda..."
             ></textarea>
           </div>
-          <button type="submit" class="ucapan-submit-btn">
-            ✨ Kirim Ucapan
-          </button>
+
+          <button type="submit" class="rsvp-submit-btn">✨ Kirim</button>
         </form>
 
-        <div class="ucapan-list-container">
+        <div class="ucapan-list-container" style="margin-top: 30px">
           <div class="ucapan-box" id="daftar-ucapan">
             <div class="ucapan-item-card">
-              <div class="ucapan-header">
-                <h4>Budi & Keluarga</h4>
-                <span class="badge-hadir">✓ Hadir</span>
-              </div>
-              <p>
-                Selamat menempuh hidup baru! Semoga menjadi keluarga yang
-                harmonis dan penuh berkah. Bahagia selalu hingga akhir hayat!
-              </p>
-              <span class="ucapan-time">12 Juni 2026</span>
+              <div class="ucapan-header"></div>
             </div>
           </div>
         </div>
@@ -413,7 +378,7 @@
             <div class="bank-details-clean">
               <span class="label-rekening">Nomor Rekening</span>
               <p class="rekening-number-clean" id="rek-bca">1234567890</p>
-              <p class="account-name-clean">a.n. Henra/Inri</p>
+              <p class="account-name-clean">Henra & Inri</p>
             </div>
             <button
               type="button"
@@ -454,27 +419,25 @@
         <div class="footer-credit-block">
           <span
             >Design Inspiration by
-            <a href="https://instagram.com/Inrialisti" target="_blank"
-              >@Inrialisti</a
-            >
+            <a href="#" target="_blank">@Inrialisti</a>
           </span>
         </div>
 
         <ul class="footer-social-icons">
           <li>
-            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="https://instagram.com/Itsmepepaaaa" target="_blank"
+              ><i class="bi bi-instagram"></i
+            ></a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="https://facebook.com/Inrialisti Pepa" target="_blank"
+              ><i class="bi bi-facebook"></i
+            ></a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-tiktok"></i></a>
+            <a href="https://tiktok.com/inripepa" target="_blank"
+              ><i class="bi bi-tiktok"></i
+            ></a>
           </li>
         </ul>
       </footer>
@@ -482,60 +445,141 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      function kirimRSVP(event) {
-        event.preventDefault();
+      // --- JALANKAN OTOMATIS SAAT HALAMAN DI-REFRESH / DIBUKA ---
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          mirror: true,
+        });
 
-        // Mengambil data dari input form RSVP
-        const nama = document.getElementById("name").value;
-        const jumlahTamu = document.getElementById("guests").value;
-        const statusHadir = document.getElementById("status").value;
-        const daftar = document.getElementById("daftar-ucapan");
-
-        // Format tanggal saat ini
-        const opsi = { year: "numeric", month: "long", day: "numeric" };
-        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
-
-        // Membuat badge warna dinamis sesuai status kehadiran
-        let badgeClass = "badge-hadir";
-        if (statusHadir === "Tidak Dapat Hadir") {
-          badgeClass = "badge-absen"; // Anda bisa menambahkan style merah di CSS jika mau
-        } else if (statusHadir === "Masih Ragu") {
-          badgeClass = "badge-ragu";
-        }
-
-        // Membuat elemen ucapan otomatis dari data RSVP
-        const ucapanBaru = document.createElement("div");
-        ucapanBaru.className = "ucapan-item-card animated-fade-in";
-        ucapanBaru.innerHTML = `
-    <div class="ucapan-header">
-      <h4>${nama}</h4>
-      <span class="${badgeClass}">✓ ${statusHadir} (${jumlahTamu} Orang)</span>
-    </div>
-    <p><em>Telah melakukan konfirmasi kehadiran melalui sistem RSVP.</em></p>
-    <span class="ucapan-time">${hariIni}</span>
-  `;
-
-        // Memasukkan hasil RSVP ke urutan paling atas daftar ucapan
-        if (daftar) {
-          daftar.insertBefore(ucapanBaru, daftar.firstChild);
-        }
-
-        // Reset form setelah sukses dikirim
-        document.getElementById("name").value = "";
-        document.getElementById("guests").selectedIndex = 0;
-        document.getElementById("status").selectedIndex = 0;
-
-        // Notifikasi sukses kepada tamu
-        alert(
-          `Terima kasih ${nama}, konfirmasi kehadiran Anda (${statusHadir}) telah kami terima! ✨`,
-        );
-      }
-      AOS.init({
-        duration: 1000,
-        once: false,
-        mirror: true,
+        // Tampilkan semua ucapan dari database lokal browser saat halaman dimuat
+        muatUcapanPermanen();
       });
 
+      // --- FUNGSI GABUNGAN: SIMPAN DI WEB (LOCALSTORAGE) & KIRIM KE WHATSAPP ---
+      function kirimKeWhatsApp(event) {
+        event.preventDefault();
+
+        // 1. Ambil data dari input form RSVP
+        const nama = document.getElementById("name").value.trim();
+        const jumlahTamu = document.getElementById("guests").value;
+        const statusHadir = document.getElementById("status").value;
+        const pesanTeks = document.getElementById("message").value.trim();
+
+        if (!nama) {
+          alert("Mohon masukkan nama Anda terlebih dahulu.");
+          return;
+        }
+
+        // 2. Simpan secara permanen ke memori lokal browser agar tidak hilang saat direfresh
+        simpanUcapanKeMemory(
+          nama,
+          pesanTeks ? pesanTeks : "Menyatakan kehadiran melalui RSVP.",
+          statusHadir,
+          jumlahTamu,
+        );
+
+        // 3. Format pengiriman pesan menuju WhatsApp
+        const nomorTujuan = "6285326871046"; // Nomor HP target sesuai bawaan kodingan Anda
+        const teksPesan =
+          `Halo, saya ingin melakukan konfirmasi undangan pernikahan:\n\n` +
+          `*Nama:* ${nama}\n` +
+          `*Jumlah Tamu:* ${jumlahTamu}\n` +
+          `*Konfirmasi:* ${statusHadir}\n` +
+          `*Pesan:* _${pesanTeks ? pesanTeks : "-"}_`;
+
+        const url = `https://api.whatsapp.com/send?phone=${nomorTujuan}&text=${encodeURIComponent(teksPesan)}`;
+
+        // Reset form RSVP kembali kosong bersih
+        document.getElementById("combined-form").reset();
+
+        // Buka aplikasi / tab WhatsApp baru
+        window.open(url, "_blank");
+      }
+
+      // --- KUNCI DATA KE STORAGE WEB (ANTI-HILANG) ---
+      function simpanUcapanKeMemory(nama, pesan, status, tamu) {
+        const opsiHari = { year: "numeric", month: "long", day: "numeric" };
+        const tanggalSekarang = new Date().toLocaleDateString(
+          "id-ID",
+          opsiHari,
+        );
+
+        // Pengkondisian warna badge sesuai status kehadiran tamu
+        let badgeClass = "badge-hadir";
+        if (status === "Tidak Dapat Hadir") badgeClass = "badge-absen";
+        if (status === "Masih Ragu") badgeClass = "badge-ragu";
+
+        // Susun objek data ucapan baru
+        const dataBaru = {
+          nama: nama,
+          pesan: pesan,
+          status: status,
+          tamu: tamu,
+          waktu: tanggalSekarang,
+          badge: badgeClass,
+        };
+
+        // Ambil data array yang sudah ada di memori browser, jika kosong buat array baru []
+        let daftarUcapanLama =
+          JSON.parse(localStorage.getItem("wedding_vows_db")) || [];
+
+        // Selipkan ucapan terbaru di urutan paling atas (terbaru muncul pertama)
+        daftarUcapanLama.unshift(dataBaru);
+
+        // Kunci dan simpan kembali ke dalam localStorage browser
+        localStorage.setItem(
+          "wedding_vows_db",
+          JSON.stringify(daftarUcapanLama),
+        );
+
+        // Gambar ulang visual list di layar browser
+        tampilkanDataKeLayar(daftarUcapanLama);
+      }
+
+      // --- MENGGAMBAR KARTU UCAPAN SECARA DINAMIS KE LAYAR ---
+      function tampilkanDataKeLayar(arrayData) {
+        const daftarContainer = document.getElementById("daftar-ucapan");
+        if (!daftarContainer) return;
+
+        // Bersihkan data template bawaan/lama agar tidak duplikat berganda
+        daftarContainer.innerHTML = "";
+
+        if (arrayData.length === 0) {
+          daftarContainer.innerHTML = `<p style="text-align:center; color:#888; font-style:italic; font-size:0.9rem; margin:15px auto;">Belum ada ucapan. Jadilah yang pertama memberikan doa restu!</p>`;
+          return;
+        }
+
+        // Loop array data untuk dijadikan HTML Card ucapan
+        arrayData.forEach((item) => {
+          const ucapanCard = document.createElement("div");
+          ucapanCard.className = "ucapan-item-card animated-fade-in";
+          ucapanCard.style.marginBottom = "15px";
+          ucapanCard.innerHTML = `
+            <div class="ucapan-header">
+              <h4>${item.nama}</h4>
+              <span class="${item.badge}">✓ ${item.status} (${item.tamu})</span>
+            </div>
+            <p>${item.pesan}</p>
+            <span class="ucapan-time" style="font-size:0.75rem; color:#888; display:block; margin-top:5px;">${item.waktu}</span>
+          `;
+          daftarContainer.appendChild(ucapanCard);
+        });
+      }
+
+      // --- MEMUAT DATA LOCALSTORAGE KETIKA WEBSITE DIBUKA KEMBALI ---
+      function muatUcapanPermanen() {
+        const dataDisimpan = localStorage.getItem("wedding_vows_db");
+        if (dataDisimpan) {
+          tampilkanDataKeLayar(JSON.parse(dataDisimpan));
+        } else {
+          // Jika memori local masih kosong, tampilkan array kosong atau template default
+          tampilkanDataKeLayar([]);
+        }
+      }
+
+      // --- KONTROL MUSIK BACKGROUND ---
       const myAudio = document.getElementById("weddingMusic");
       const musicIcon = document.getElementById("musicIcon");
       const navbar = document.getElementById("navbar");
@@ -544,14 +588,10 @@
       function openInvitation(event) {
         if (event) event.preventDefault();
 
-        // Melepas penguncian scroll pada body
         document.body.classList.remove("no-scroll");
-
-        // Memunculkan navbar
         navbar.classList.remove("navbar-hidden");
         navbar.classList.add("navbar-visible");
 
-        // Memutar musik otomatis
         if (!isPlaying) {
           myAudio
             .play()
@@ -560,17 +600,15 @@
               musicIcon.innerText = "⏸️";
               document.getElementById("musicBtn").classList.add("rotating");
             })
-            .catch((error) => {
-              console.log("Musik tertahan sistem autoplay browser.");
+            .catch(() => {
+              console.log("Musik otomatis tertahan aturan kebijakan browser.");
             });
         }
 
-        // Efek transisi gulir langsung ke bagian pengantin
-        document.getElementById("mempelai").scrollIntoView({
-          behavior: "smooth",
-        });
+        document
+          .getElementById("mempelai")
+          .scrollIntoView({ behavior: "smooth" });
 
-        // Merefresh library AOS animasi agar tidak nge-bug saat halaman terbuka
         setTimeout(() => {
           AOS.refresh();
         }, 500);
@@ -589,50 +627,8 @@
         isPlaying = !isPlaying;
       }
 
-      function salinTeks(idElemen) {
-        const text = document.getElementById(idElemen).innerText;
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            alert("Nomor rekening berhasil disalin!");
-          })
-          .catch((err) => {
-            console.error("Gagal menyalin teks: ", err);
-          });
-      }
-
-      function tambahUcapan(event) {
-        event.preventDefault();
-
-        const nama = document.getElementById("guest-name").value;
-        const pesan = document.getElementById("guest-message").value;
-        const daftar = document.getElementById("daftar-ucapan");
-
-        const opsi = { year: "numeric", month: "long", day: "numeric" };
-        const hariIni = new Date().toLocaleDateString("id-ID", opsi);
-
-        const ucapanBaru = document.createElement("div");
-        ucapanBaru.className = "ucapan-item-card animated-fade-in";
-        ucapanBaru.innerHTML = `
-          <div class="ucapan-header">
-            <h4>${nama}</h4>
-            <span class="badge-hadir">✓ Tamu</span>
-          </div>
-          <p>${pesan}</p>
-          <span class="ucapan-time">${hariIni}</span>
-        `;
-
-        daftar.insertBefore(ucapanBaru, daftar.firstChild);
-
-        document.getElementById("guest-name").value = "";
-        document.getElementById("guest-message").value = "";
-
-        alert("Terima kasih! Ucapan Anda telah ditambahkan.");
-      }
-
-      // --- SCRIPT TIMEOUT COUNTDOWN ---
+      // --- LOGIKA HITUNG MUNDUR (COUNTDOWN REALTME) ---
       const targetDate = new Date("August 8, 2028 10:00:00").getTime();
-
       const countdownInterval = setInterval(function () {
         const now = new Date().getTime();
         const distance = targetDate - now;
@@ -656,9 +652,22 @@
         if (distance < 0) {
           clearInterval(countdownInterval);
           document.querySelector(".countdown").innerHTML =
-            "<h3>Acara Pernikahan Telah Dimulai!</h3>";
+            "<h3>Acara Telah Dimulai!</h3>";
         }
       }, 1000);
+
+      // --- SALIN NOMOR REKENING ---
+      function salinTeks(idElemen) {
+        const text = document.getElementById(idElemen).innerText;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert("Nomor rekening berhasil disalin! ✨");
+          })
+          .catch((err) => {
+            console.error("Gagal menyalin teks: ", err);
+          });
+      }
     </script>
   </body>
 </html>

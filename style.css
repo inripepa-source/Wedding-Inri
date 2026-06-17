@@ -254,6 +254,7 @@ p {
   color: #e0e0e0;
   margin-bottom: 15px;
   max-width: 320px;
+  text-align: justify;
 }
 .orang-tua-mempelai {
   font-size: 0.85rem;
@@ -416,32 +417,64 @@ p {
   }
 }
 
-/* --- RSVP CLEAN FORM --- */
+/* --- RSVP CLEAN FORM - PERBAIKAN --- */
 .rsvp-form-clean {
   max-width: 480px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px; /* Tingkatkan dari 15px ke 20px agar tidak berhimpitan */
   text-align: left;
 }
+
+.rsvp-note {
+  font-size: 0.9rem !important; /* Ukuran font yang lebih proporsional */
+  line-height: 1.5 !important; /* Jarak antar baris agar tidak bertumpuk */
+  margin-bottom: 25px !important; /* Memberi ruang napas sebelum form dimulai */
+  color: #e0e0e0 !important; /* Sedikit lebih cerah agar mudah dibaca */
+  text-align: center;
+  padding: 0 10px; /* Memberi padding agar tidak menempel ke pinggir kartu */
+}
+
+/* ==========================================================================
+   PERBAIKAN TAMPILAN TEKS SUB-JUDUL RSVP AGAR MELEBAR RAPI
+   ========================================================================== */
+.rsvp-desc-text {
+  display: block !important;
+  width: 100% !important;
+  max-width: 550px !important; /* Batas ideal agar teks tidak meluber ke tepi kartu kaca */
+  margin: 0 auto 30px auto !important; /* Mengatur jarak seimbang ke judul atas dan form bawah */
+  text-align: center !important;
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Penyesuaian khusus untuk layar HP */
+@media (max-width: 768px) {
+  .rsvp-desc-text {
+    font-size: 0.85rem !important;
+    max-width: 92% !important; /* Memberikan ruang napas di sisi kiri dan kanan layar HP */
+    line-height: 1.5 !important;
+    margin-bottom: 25px !important;
+  }
+}
+
 .form-group-clean {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px; /* Tambahkan sedikit jarak antara label dan input */
 }
-.form-group-clean label {
-  font-size: 0.85rem;
-  color: var(--text-gold);
-}
+
+/* Tambahkan padding pada input agar teks di dalam tidak terlalu mepet ke pinggir */
 .form-group-clean input,
 .form-group-clean select,
 .form-group-clean textarea {
   width: 100%;
-  padding: 12px;
+  padding: 15px; /* Ditingkatkan dari 12px */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
+  border-radius: 10px; /* Dibuat sedikit lebih membulat */
   color: #fff;
   font-family: inherit;
   outline: none;
@@ -451,15 +484,24 @@ p {
 }
 .rsvp-submit-btn,
 .ucapan-submit-btn {
+  margin-top: 10px; /* Memberikan ruang antara input terakhir dengan tombol */
   background: var(--text-gold);
   color: #111;
   border: none;
-  padding: 13px;
-  font-size: 0.95rem;
+  padding: 15px; /* Sedikit diperbesar agar lebih mudah diklik di HP */
+  font-size: 1rem;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .rsvp-note {
+    font-size: 0.85rem !important; /* Memperkecil font agar tidak *break* di layar kecil */
+    line-height: 1.4 !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 /* ==========================================================================
